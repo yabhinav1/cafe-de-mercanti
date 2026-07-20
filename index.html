@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café de' Mercanti — Old Montreal | Authentic Italian Coffee</title>
+  <meta name="description" content="Café de' Mercanti brings authentic Italian espresso culture to Old Montreal. Handcrafted coffee, fresh pastries, and a warm European atmosphere at 350 Rue Notre-Dame Est.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">Café de' Mercanti</a>
+    <div class="nav__links" id="navLinks">
+      <a href="#about">La Storia</a>
+      <a href="#menu">Menu</a>
+      <a href="#featured">Specials</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="nav__cta">Find Us</a>
+    </div>
+    <div class="nav__burger" id="burger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about" onclick="closeNav()">La Storia</a>
+    <a href="#menu" onclick="closeNav()">Menu</a>
+    <a href="#featured" onclick="closeNav()">Specials</a>
+    <a href="#visit" onclick="closeNav()">Visit</a>
+    <a href="#visit" onclick="closeNav()">Find Us</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__img">
+      <!-- Old Montreal cobblestone cafe vibes — Unsplash free images -->
+      <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=1600&q=80" alt="Warm interior of Café de' Mercanti in Old Montreal">
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__body">
+      <p class="hero__tag">350 Rue Notre-Dame Est, Vieux-Montréal</p>
+      <h1 class="hero__title">Authentic Italian<br>coffee in the heart of<br><em>Old Montreal</em></h1>
+      <p class="hero__sub">Founded by Gianni Battista, we bring the warmth and tradition of a real Italian espresso bar to the cobblestone streets of Vieux-Montréal. No gimmicks — just honest coffee.</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--fill">See the Menu</a>
+        <a href="#visit" class="btn btn--ghost">Hours & Location</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <div class="about__inner">
+      <div class="about__photo sr--left">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80" alt="Barista pulling espresso at Café de' Mercanti">
+      </div>
+      <div class="about__text sr--right">
+        <p class="about__label">La Storia</p>
+        <h2 class="about__heading">A little piece of Italy,<br>right on Notre-Dame</h2>
+        <p>Café de' Mercanti wasn't born from a business plan. It started with Gianni's obsession for doing espresso the right way — the way his family taught him in Italy. The kind of coffee that doesn't need flavoured syrups to taste good.</p>
+        <p>Walk in, and it feels like you've stepped into a neighbourhood bar in Rome. The machine hisses, the cups clink, regulars lean on the counter. That's how it should be. We have two locations now — Monkland Village and here in Vieux-Montréal — but the philosophy hasn't changed.</p>
+        <div class="about__details">
+          <div class="about__detail">
+            <strong>Signature Blend</strong>
+            <span>Our own Italian roast, crafted in-house</span>
+          </div>
+          <div class="about__detail">
+            <strong>Two Locations</strong>
+            <span>Old Montreal & Monkland Village</span>
+          </div>
+          <div class="about__detail">
+            <strong>Counter Culture</strong>
+            <span>Stand-up espresso, the Italian way</span>
+          </div>
+          <div class="about__detail">
+            <strong>Take Home</strong>
+            <span>Beans, ground, & Nespresso capsules</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu section" id="menu">
+    <div class="section-head sr">
+      <p class="section-head__label">Il Menu</p>
+      <h2 class="section-head__title">Simple. Honest. Italian.</h2>
+      <p class="section-head__sub">We don't do 47 flavour combinations. We do a few things, and we do them properly.</p>
+    </div>
+
+    <div class="menu__tabs sr" id="menuTabs">
+      <button class="menu__tab active" data-idx="0">Caffè</button>
+      <button class="menu__tab" data-idx="1">Bevande</button>
+      <button class="menu__tab" data-idx="2">Dolci</button>
+      <button class="menu__tab" data-idx="3">Pranzo</button>
+    </div>
+
+    <div class="menu__slider-wrap sr">
+      <div class="menu__slider" id="menuSlider">
+
+        <!-- Caffè -->
+        <div class="menu__panel">
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Espresso</div>
+              <div class="menu__item-desc">Our signature Italian roast, pulled short and strong</div>
+            </div>
+            <span class="menu__item-price">$3.25</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Doppio</div>
+              <div class="menu__item-desc">Double shot for those who mean it</div>
+            </div>
+            <span class="menu__item-price">$4.00</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Cappuccino</div>
+              <div class="menu__item-desc">Equal parts espresso, steamed milk, foam — the classic</div>
+            </div>
+            <span class="menu__item-price">$5.00</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Caffè Latte</div>
+              <div class="menu__item-desc">Espresso with steamed milk, light foam</div>
+            </div>
+            <span class="menu__item-price">$5.25</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Marocchino</div>
+              <div class="menu__item-desc">Espresso, cocoa, frothed milk — Gianni's favourite</div>
+            </div>
+            <span class="menu__item-price">$5.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Americano</div>
+              <div class="menu__item-desc">Espresso lengthened with hot water</div>
+            </div>
+            <span class="menu__item-price">$3.75</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Macchiato</div>
+              <div class="menu__item-desc">Espresso "stained" with a touch of foam</div>
+            </div>
+            <span class="menu__item-price">$3.75</span>
+          </div>
+        </div>
+
+        <!-- Bevande -->
+        <div class="menu__panel">
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Cioccolata Calda</div>
+              <div class="menu__item-desc">Rich Italian hot chocolate, thick and dark</div>
+            </div>
+            <span class="menu__item-price">$5.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Chai Latte</div>
+              <div class="menu__item-desc">Spiced black tea with steamed milk</div>
+            </div>
+            <span class="menu__item-price">$5.25</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Matcha Latte</div>
+              <div class="menu__item-desc">Japanese matcha, oat or regular milk</div>
+            </div>
+            <span class="menu__item-price">$5.75</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Fresh Squeezed Orange Juice</div>
+              <div class="menu__item-desc">Pressed to order, no additions</div>
+            </div>
+            <span class="menu__item-price">$5.00</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Italian Soda</div>
+              <div class="menu__item-desc">Sparkling water with house syrups</div>
+            </div>
+            <span class="menu__item-price">$4.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Thé / Tisane</div>
+              <div class="menu__item-desc">Selection of loose-leaf teas</div>
+            </div>
+            <span class="menu__item-price">$4.00</span>
+          </div>
+        </div>
+
+        <!-- Dolci -->
+        <div class="menu__panel">
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Croissant au Beurre</div>
+              <div class="menu__item-desc">Flaky, buttery, baked fresh each morning</div>
+            </div>
+            <span class="menu__item-price">$4.25</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Biscotti</div>
+              <div class="menu__item-desc">Almond, the way nonna makes them</div>
+            </div>
+            <span class="menu__item-price">$3.00</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Amaretti</div>
+              <div class="menu__item-desc">Soft Italian almond cookies</div>
+            </div>
+            <span class="menu__item-price">$3.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Tiramisù</div>
+              <div class="menu__item-desc">Classic recipe, made in house daily</div>
+            </div>
+            <span class="menu__item-price">$7.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Ricotta Pistachio Donut</div>
+              <div class="menu__item-desc">A crowd favourite — get here early</div>
+            </div>
+            <span class="menu__item-price">$5.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Pain au Chocolat</div>
+              <div class="menu__item-desc">Dark chocolate, layered pastry</div>
+            </div>
+            <span class="menu__item-price">$5.00</span>
+          </div>
+        </div>
+
+        <!-- Pranzo -->
+        <div class="menu__panel">
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Panino Prosciutto</div>
+              <div class="menu__item-desc">Prosciutto crudo, mozzarella, arugula, focaccia</div>
+            </div>
+            <span class="menu__item-price">$12.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Panino Caprese</div>
+              <div class="menu__item-desc">Tomato, fresh mozzarella, basil, balsamic</div>
+            </div>
+            <span class="menu__item-price">$11.00</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Pizza Bianca</div>
+              <div class="menu__item-desc">Fluffy white pizza with olive oil & rosemary</div>
+            </div>
+            <span class="menu__item-price">$9.00</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Insalata Mista</div>
+              <div class="menu__item-desc">Mixed greens, shaved parmesan, lemon vinaigrette</div>
+            </div>
+            <span class="menu__item-price">$10.50</span>
+          </div>
+          <div class="menu__row">
+            <div>
+              <div class="menu__item-name">Soup of the Day</div>
+              <div class="menu__item-desc">Ask us — it changes with the season</div>
+            </div>
+            <span class="menu__item-price">$8.00</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="menu__dots sr" id="menuDots">
+      <button class="menu__dot active" data-idx="0"></button>
+      <button class="menu__dot" data-idx="1"></button>
+      <button class="menu__dot" data-idx="2"></button>
+      <button class="menu__dot" data-idx="3"></button>
+    </div>
+  </section>
+
+  <!-- Divider image -->
+  <section class="divider-img">
+    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1600&q=80" alt="Old Montreal cobblestone street">
+    <div class="divider-img__content">
+      <blockquote>"Il caffè deve essere caldo come l'inferno, nero come il diavolo, puro come un angelo, dolce come l'amore."</blockquote>
+      <cite>— Italian Proverb</cite>
+    </div>
+  </section>
+
+  <!-- Featured / Specials -->
+  <section class="features section" id="featured">
+    <div class="section-head sr">
+      <p class="section-head__label">Worth Trying</p>
+      <h2 class="section-head__title">What People Come Back For</h2>
+      <p class="section-head__sub">Some things on our menu have earned their own reputation.</p>
+    </div>
+
+    <div class="features__grid sr">
+      <div class="feature-card">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefda?w=700&q=80" alt="Espresso with crema">
+        <div class="feature-card__info">
+          <p class="feature-card__tag">Signature</p>
+          <h3 class="feature-card__title">The Mercanti Espresso</h3>
+          <p class="feature-card__desc">Our proprietary blend. Dark, robust, unapologetically Italian. The reason people drive across town.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=700&q=80" alt="Italian pastries and biscotti">
+        <div class="feature-card__info">
+          <p class="feature-card__tag">Fresh Daily</p>
+          <h3 class="feature-card__title">Ricotta Pistachio Donut</h3>
+          <p class="feature-card__desc">They sell out by noon. Light, creamy, not too sweet. We've been asked for the recipe hundreds of times.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=700&q=80" alt="Coffee beans being roasted">
+        <div class="feature-card__info">
+          <p class="feature-card__tag">Take Home</p>
+          <h3 class="feature-card__title">Beans & Capsules</h3>
+          <p class="feature-card__desc">Whole bean, ground, or Nespresso-compatible capsules. Enjoy Mercanti at home. Free shipping on 2kg+.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews section" id="reviews">
+    <div class="section-head sr">
+      <p class="section-head__label">From Our Guests</p>
+      <h2 class="section-head__title">What People Are Saying</h2>
+      <p class="section-head__sub">4.9 out of 5 on TripAdvisor · Ranked #388 of 3,956 restaurants in Montreal</p>
+    </div>
+
+    <div class="reviews__track sr">
+      <div class="review-card">
+        <div class="review-card__stars">★ ★ ★ ★ ★</div>
+        <p class="review-card__text">"The best espresso I've had outside of Italy. Seriously. And the tiramisù is the real deal. This place is a gem hidden in Old Montreal."</p>
+        <div class="review-card__who">
+          <div class="review-card__avatar">M</div>
+          <div>
+            <div class="review-card__name">Marco T.</div>
+            <div class="review-card__role">TripAdvisor review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__stars">★ ★ ★ ★ ★</div>
+        <p class="review-card__text">"Finally, a café that doesn't drown everything in syrup. Just good, honest coffee in a beautiful space. Gianni clearly knows what he's doing."</p>
+        <div class="review-card__who">
+          <div class="review-card__avatar">S</div>
+          <div>
+            <div class="review-card__name">Sophie L.</div>
+            <div class="review-card__role">Google review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__stars">★ ★ ★ ★ ★</div>
+        <p class="review-card__text">"We stumbled in during a walk through Old Montreal and ended up staying two hours. The biscotti, the marocchino, the atmosphere — perfection."</p>
+        <div class="review-card__who">
+          <div class="review-card__avatar">A</div>
+          <div>
+            <div class="review-card__name">Alex & Priya</div>
+            <div class="review-card__role">Yelp review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__stars">★ ★ ★ ★ ★</div>
+        <p class="review-card__text">"This is my reading spot. Great Wi-Fi, nobody rushes you, and the cappuccino is consistently perfect. I've been coming every week for a year."</p>
+        <div class="review-card__who">
+          <div class="review-card__avatar">J</div>
+          <div>
+            <div class="review-card__name">Jean-François D.</div>
+            <div class="review-card__role">Local regular</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="gallery">
+    <div class="section-head sr">
+      <p class="section-head__label">Moments</p>
+      <h2 class="section-head__title">Inside Mercanti</h2>
+    </div>
+    <div class="gallery__grid sr">
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=900&q=80" alt="Cafe interior with warm lighting">
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80" alt="Cappuccino being poured">
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Latte art from above">
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038024a?w=600&q=80" alt="Italian pastry selection">
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1524362539155-2c7eba32aeef?w=600&q=80" alt="Old Montreal street view">
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit / Hours / Location -->
+  <section class="visit section" id="visit">
+    <div class="section-head sr">
+      <p class="section-head__label">Venez Nous Voir</p>
+      <h2 class="section-head__title">Find Us in Old Montreal</h2>
+    </div>
+
+    <div class="visit__inner sr">
+      <div class="visit__info">
+        <h3 class="visit__heading">Hours & Contact</h3>
+        <div class="hours-list" id="hoursList">
+          <div class="hours-list__row" data-day="1">
+            <span class="day">Monday</span>
+            <span class="time">7:30 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-list__row" data-day="2">
+            <span class="day">Tuesday</span>
+            <span class="time">7:30 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-list__row" data-day="3">
+            <span class="day">Wednesday</span>
+            <span class="time">7:30 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-list__row" data-day="4">
+            <span class="day">Thursday</span>
+            <span class="time">7:30 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-list__row" data-day="5">
+            <span class="day">Friday</span>
+            <span class="time">7:30 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-list__row" data-day="6">
+            <span class="day">Saturday</span>
+            <span class="time">8:00 AM – 5:00 PM</span>
+          </div>
+          <div class="hours-list__row" data-day="0">
+            <span class="day">Sunday</span>
+            <span class="time">8:00 AM – 5:00 PM</span>
+          </div>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-list__item">
+            <span class="contact-list__icon">&#9679;</span>
+            <span>350 Rue Notre-Dame Est, Montréal, QC H2Y 1C7</span>
+          </div>
+          <div class="contact-list__item">
+            <span class="contact-list__icon">&#9679;</span>
+            <span>(514) 569-7620</span>
+          </div>
+          <div class="contact-list__item">
+            <span class="contact-list__icon">&#9679;</span>
+            <span>info@cafedemercanti.ca</span>
+          </div>
+          <div class="contact-list__item">
+            <span class="contact-list__icon">&#9679;</span>
+            <span>@cafedemercanti on Instagram</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="visit__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.5!2d-73.5530!3d45.5087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a446e2e8165%3A0x7b0d3e7b2e7e9e1f!2s350%20Rue%20Notre-Dame%20E%2C%20Montr%C3%A9al%2C%20QC%20H2Y%201C7!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Café de' Mercanti location — 350 Rue Notre-Dame Est, Old Montreal">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__brand-name">Café de' Mercanti</div>
+        <p>Authentic Italian espresso culture in Old Montreal. Two locations, one philosophy: do less, do it properly.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/cafedemercanti/" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
+          <a href="https://www.facebook.com/cafedemercanti/" target="_blank" rel="noopener" aria-label="Facebook">Fb</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h5>Navigate</h5>
+        <a href="#about">La Storia</a>
+        <a href="#menu">Menu</a>
+        <a href="#featured">Specials</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
+      </div>
+
+      <div class="footer__col">
+        <h5>Locations</h5>
+        <a href="#">Old Montreal</a>
+        <a href="#">Monkland Village</a>
+        <a href="https://cafedemercantindg.com" target="_blank" rel="noopener">Online Shop</a>
+        <a href="#">Catering</a>
+      </div>
+
+      <div class="footer__col">
+        <h5>Stay in touch</h5>
+        <p style="font-size:13px; margin-bottom:8px; color:rgba(245,239,230,0.45);">New blends, seasonal specials, and the occasional free coffee.</p>
+        <form class="footer__newsletter" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Grazie! You\'re on the list.');">
+          <input type="email" placeholder="your@email.com" required aria-label="Email">
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; 2025 Café de' Mercanti. Tous droits réservés.</span>
+      <div>
+        <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    addEventListener('scroll', () => {
+      nav.classList.toggle('pinned', scrollY > 60);
+    });
+
+    // Mobile nav
+    const burger = document.getElementById('burger');
+    const mobileNav = document.getElementById('mobileNav');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    function closeNav() {
+      burger.classList.remove('open');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Menu slider
+    const slider = document.getElementById('menuSlider');
+    const tabs = document.querySelectorAll('.menu__tab');
+    const dots = document.querySelectorAll('.menu__dot');
+    let idx = 0;
+    const panels = 4;
+
+    function goTo(i) {
+      if (i < 0) i = panels - 1;
+      if (i >= panels) i = 0;
+      idx = i;
+      slider.style.transform = `translateX(-${i * 100}%)`;
+      tabs.forEach((t, n) => t.classList.toggle('active', n === i));
+      dots.forEach((d, n) => d.classList.toggle('active', n === i));
+    }
+
+    tabs.forEach(t => t.addEventListener('click', () => goTo(+t.dataset.idx)));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
+
+    // Auto-advance
+    let auto = setInterval(() => goTo(idx + 1), 7000);
+    document.querySelector('.menu__slider-wrap').addEventListener('mouseenter', () => clearInterval(auto));
+    document.querySelector('.menu__slider-wrap').addEventListener('mouseleave', () => {
+      auto = setInterval(() => goTo(idx + 1), 7000);
+    });
+
+    // Swipe
+    let sx = 0;
+    const wrap = document.querySelector('.menu__slider-wrap');
+    wrap.addEventListener('touchstart', e => { sx = e.changedTouches[0].screenX; }, { passive: true });
+    wrap.addEventListener('touchend', e => {
+      const d = sx - e.changedTouches[0].screenX;
+      if (Math.abs(d) > 50) goTo(idx + (d > 0 ? 1 : -1));
+    }, { passive: true });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.sr, .sr--left, .sr--right').forEach(el => observer.observe(el));
+
+    // Today highlight
+    const today = new Date().getDay();
+    document.querySelectorAll('.hours-list__row').forEach(row => {
+      if (+row.dataset.day === today) {
+        row.classList.add('today');
+        row.querySelector('.day').textContent += ' (today)';
+      }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Parallax on divider
+    addEventListener('scroll', () => {
+      const d = document.querySelector('.divider-img img');
+      if (!d) return;
+      const r = d.closest('.divider-img').getBoundingClientRect();
+      const p = r.top / innerHeight;
+      d.style.transform = `translateY(${p * -20}%)`;
+    });
+  </script>
+
+</body>
+</html>
