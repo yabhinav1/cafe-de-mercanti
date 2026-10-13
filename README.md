@@ -31,12 +31,13 @@ Plain HTML, CSS and vanilla JavaScript. No framework and no build step. Deployed
 as a static site.
 
 ```
-index.html   the page and its script
-style.css    every style, with colour tokens at the top
+index.html       the page and its script
+style.css        every style, with colour tokens at the top
+images/photos/   the photos the page uses, as WebP
 ```
 
-`fonts/` and `images/` hold assets from early iterations. The live page loads its fonts
-from Google Fonts and its photos from Unsplash.
+Photos are from Unsplash, saved as WebP in `images/photos/` so they cannot disappear. The
+other files in `fonts/` and `images/` are from early iterations and are not used by the page.
 
 ## Run it
 
